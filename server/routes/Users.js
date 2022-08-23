@@ -30,7 +30,7 @@ router.post('/login', async (req, res) =>{
     const accessToken = sign({username: user.username, id: user.id },
        "sec"
       );
-    res.json(accessToken);
+      res.json({toke: accessToken, username: username, id: user.id});
   });
 });
 
